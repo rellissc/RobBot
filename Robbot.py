@@ -3,7 +3,11 @@ import random
 from discord.ext import commands
 import math
 import re
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+token=os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='/')
 
 
@@ -255,5 +259,5 @@ class CoinPurse:
 
 
 
-bot.run('NjY3MjE3ODQ5MzU3Njk3MDM2.Xh_hiw.6lvWb2TNE5HaJ8mPTPzOXcQBQSs')
+bot.run(token)
 #  667217849357697036
