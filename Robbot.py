@@ -4,11 +4,16 @@ from discord.ext import commands
 import math
 import re
 import os
+import mongodb
 from dotenv import load_dotenv
+
 
 load_dotenv()
 token=os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='/')
+
+client = pymongo.MongoClient("mongodb+srv://rellissc:<password>@robbot-z6mrh.mongodb.net/test?retryWrites=true&w=majority")
+db = client.test
 
 
 @bot.event
